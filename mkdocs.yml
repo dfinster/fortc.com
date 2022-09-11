@@ -1,0 +1,92 @@
+site_name: fortc.com
+site_url: https://www.fortc.com/
+site_author: David Finster
+site_description: ""
+repo_url: https://github.com/dfinr/fortc.com
+copyright: <a href="/site/privacy/">Copyright &copy; David Finster &nbsp;&bull;&nbsp; Privacy Policy</a>
+edit_uri: blob/main/docs/
+
+
+nav:
+  - index.md
+  - ...
+##  - resume/index.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    logo: material/sail-boat
+  favicon: assets/favicons/sailing_black-256x256.png
+  palette:
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+   # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - md_in_html
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+      toc_depth: 3
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - awesome-pages:
+      filename: .pages
+#      collapse_single_pages: true
+      strict: true
+
+  - tags:
+      tags_file: site/tags.md
+
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dfinr
+      name: David Finster's GitHub
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
