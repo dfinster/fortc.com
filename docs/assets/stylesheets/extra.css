@@ -1,3 +1,4 @@
+
 .md-nav {
     margin-left: 9px;
 }
@@ -9,3 +10,25 @@
 .md-tabs__link {
     font-size: 0.9rem;
 }
+
+.column {
+    float: left;
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 959px) {
+    .column {
+      width: 100%;
+    }
+  }

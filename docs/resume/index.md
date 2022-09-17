@@ -1,8 +1,8 @@
 ---
-title: Placeholder
+title: Resume
 revision_date: Sept 10 2022
-#hide:
-#  - navigation
+hide:
+  - navigation
 #  - toc
 #  - footer
 #tags:
@@ -10,4 +10,4 @@ revision_date: Sept 10 2022
 # - unimportant
 ---
 
-Placeholder
+In progress.

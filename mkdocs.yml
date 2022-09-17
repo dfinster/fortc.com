@@ -1,23 +1,21 @@
-site_name: fortc.com
+site_name: David Finster
 site_url: https://www.fortc.com/
 site_author: David Finster
-site_description: ""
+site_description: "David Finster - Technical Editor and IT Consultant"
 repo_url: https://github.com/dfinr/fortc.com
 copyright: <a href="/site/privacy/">Copyright &copy; David Finster &nbsp;&bull;&nbsp; Privacy Policy</a>
 edit_uri: blob/main/docs/
 
-
 nav:
-  - index.md
+  - 'About David': index.md
   - ...
-##  - resume/index.md
+  - resume/index.md
 
 theme:
   name: material
   custom_dir: overrides
-  icon:
-    logo: material/sail-boat
-  favicon: assets/favicons/sailing_black-256x256.png
+  logo: assets/logo/purplange.png
+  favicon: assets/logo/purplange.png
   palette:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -40,8 +38,8 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
+#    - navigation.tabs
+#    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - search.suggest

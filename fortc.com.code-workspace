@@ -15,12 +15,11 @@
             "MD014": false,
             "MD025": false,
             "MD026": false,
-            "MD033": false,        
+            "MD033": false,
             "MD040": false,
             "MD041": false
         },
         "markdownlint.run": "onSave",
-        "vale.core.useCLI": true,
         "files.autoSave": "afterDelay",
         "files.autoSaveDelay": 3000,
         "editor.useTabStops": false,
