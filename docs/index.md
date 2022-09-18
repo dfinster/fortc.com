@@ -33,6 +33,6 @@ My recent projects.
 
 * [Dad Jokes](https://dadjoke.fortc.com) &mdash; A React website I built for fun.
 * [Vultr API](https://www.vultr.com/api/) &mdash; Documentation for my day job.
-* [Random Quote](/hugo-random-quotes/) &mdash; Hugo shortcode.
+* [Random Quote](https://random-quote.fortc.com/) &mdash; Hugo shortcode.
 
 </div></div>
