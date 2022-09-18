@@ -8,6 +8,7 @@ edit_uri: blob/main/docs/
 
 nav:
   - 'About David': index.md
+  - 'Articles': /site/tags/
   - ...
   - resume/index.md
 
@@ -38,8 +39,8 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-#    - navigation.tabs
-#    - navigation.tabs.sticky
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - search.suggest

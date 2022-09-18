@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-revision_date: June 19, 2022
+revision_date: 2022-09-18
 hide:
   - navigation
   - toc

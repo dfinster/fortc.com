@@ -1,6 +1,6 @@
 ---
 title: Resume
-revision_date: Sept 10 2022
+revision_date: 2022-09-18
 hide:
   - navigation
 #  - toc
