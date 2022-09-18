@@ -2,7 +2,7 @@ site_name: David Finster
 site_url: https://www.fortc.com/
 site_author: David Finster
 site_description: "David Finster - Technical Editor and IT Consultant"
-repo_url: https://github.com/dfinr/fortc.com
+repo_url: https://github.com/dfinster/fortc.com
 copyright: <a href="/site/privacy/">Copyright &copy; David Finster &nbsp;&bull;&nbsp; Privacy Policy</a>
 edit_uri: blob/main/docs/
 
@@ -81,7 +81,7 @@ extra:
   generator: true
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/dfinr
+      link: https://github.com/dfinster
       name: David Finster's GitHub
 
 extra_css:

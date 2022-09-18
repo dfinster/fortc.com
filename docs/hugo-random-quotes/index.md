@@ -11,7 +11,7 @@ tags:
 
 I wanted to add random quotes to a static Hugo site and I couldn't find any widgets, so I wrote one. I thought this would be an excellent way to learn more about extending Hugo, and it was.
 
-> :point_right: &nbsp; See [my working example](https://random-quote.fortc.com) and [GitHub repository](https://github.com/dfinr/hugo-random-quotes).
+> :point_right: &nbsp; See [my working example](https://random-quote.fortc.com) and [GitHub repository](https://github.com/dfinster/hugo-random-quotes).
 
 I wanted a shortcode and a page partial widget that used the same code in a DRY approach, but Hugo passes the parameters differently to these types. In the end it was cleaner to repeat the logic in both places, and you have the option to use only one format if you don't need the other one. I may revisit this later if I find a better solution.
 
@@ -19,10 +19,10 @@ I wanted a shortcode and a page partial widget that used the same code in a DRY 
 
 Here's how to add it to your Hugo site.
 
- 1. Add [the shortcode](https://github.com/dfinr/hugo-random-quotes/blob/main/layouts/shortcodes/quote.html) to `/layouts/shortcodes` in your template.
- 1. Add the [page partial](https://github.com/dfinr/hugo-random-quotes/blob/main/layouts/partials/quote.html) to `/layouts/partials`.
- 1. Add `.quote_heading`, `.quote_text`, and `.quote_source` from the [example stylesheet](https://github.com/dfinr/hugo-random-quotes/blob/main/assets/scss/custom.scss) to your theme's custom style.
- 1. Add a `quotes.csv` file to the root of your Hugo project. Here's [a link to mine](https://github.com/dfinr/hugo-random-quotes/blob/main/quotes.csv).
+ 1. Add [the shortcode](https://github.com/dfinster/hugo-random-quotes/blob/main/layouts/shortcodes/quote.html) to `/layouts/shortcodes` in your template.
+ 1. Add the [page partial](https://github.com/dfinster/hugo-random-quotes/blob/main/layouts/partials/quote.html) to `/layouts/partials`.
+ 1. Add `.quote_heading`, `.quote_text`, and `.quote_source` from the [example stylesheet](https://github.com/dfinster/hugo-random-quotes/blob/main/assets/scss/custom.scss) to your theme's custom style.
+ 1. Add a `quotes.csv` file to the root of your Hugo project. Here's [a link to mine](https://github.com/dfinster/hugo-random-quotes/blob/main/quotes.csv).
 
 #### About the CSV file
 

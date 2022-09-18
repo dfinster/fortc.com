@@ -14,8 +14,8 @@ hide:
 I’m the technical editor, IT consultant, and cloud computing enthusiast that manages the [Vultr Docs creator program](https://www.vultr.com/docs/category/vultr-docs/).
 
 * [My Notion content tracker](https://dfinster.notion.site/)
-* [Medium](https://medium.com/@dfinr)
-* [LinkedIn](https://www.linkedin.com/in/dfinr/)
+* [Medium](https://medium.com/@dfinster)
+* [LinkedIn](https://www.linkedin.com/in/dfinster/)
 
 When I'm not at a keyboard, I like to read, cook, sail, and noodle on guitar.
 
