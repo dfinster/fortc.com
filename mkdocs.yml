@@ -1,7 +1,7 @@
 site_name: David Finster
 site_url: https://www.fortc.com/
 site_author: David Finster
-site_description: "David Finster - Technical Editor and IT Consultant"
+site_description: "David Finster - Technical Editor, IT Consultant, Racing Sailor, Guitar Hacker"
 repo_url: https://github.com/dfinster/fortc.com
 copyright: <a href="/site/privacy/">Copyright &copy; David Finster &nbsp;&bull;&nbsp; Privacy Policy</a>
 edit_uri: blob/main/docs/
@@ -19,22 +19,22 @@ theme:
   favicon: assets/logo/purplange.png
   palette:
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+#    - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: indigo
+    accent: cyan
+#      toggle:
+#        icon: material/brightness-4
+#        name: Switch to light mode
 
    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: deep purple
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+#    - media: "(prefers-color-scheme: light)"
+#      scheme: default
+#      primary: indigo
+#      accent: deep purple
+#      toggle:
+#        icon: material/brightness-7
+#        name: Switch to dark mode
 
   features:
     - navigation.instant
