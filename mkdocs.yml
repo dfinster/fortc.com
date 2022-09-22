@@ -4,10 +4,14 @@ site_author: David Finster
 site_description: "David Finster - Technical Editor, IT Consultant, Racing Sailor, Guitar Hacker"
 repo_url: https://github.com/dfinster/fortc.com
 copyright: <a href="/site/privacy/">Copyright &copy; David Finster &nbsp;&bull;&nbsp; Privacy Policy</a>
-edit_uri: blob/main/docs/
+#edit_uri: blob/main/docs/
+edit_uri: ""
 
 nav:
   - 'About David': index.md
+  - 'Medium': https://medium.com/@dfinster
+  - 'DEV': https://dev.to/dfinster
+  - 'LinkedIn': https://www.linkedin.com/in/dfinster
 #  - 'Articles': /site/tags/
   - ...
 #  - resume/index.md
@@ -82,7 +86,16 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/dfinster
-      name: David Finster's GitHub
+      name: GitHub
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@dfinster
+      name: Medium
+    - icon: fontawesome/brands/dev
+      link: https://dev.to/dfinster
+      name: DEV
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dfinster
+      name: LinkedIn
 
 extra_css:
   - assets/stylesheets/extra.css
