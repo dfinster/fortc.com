@@ -26,7 +26,7 @@ When I'm not at a keyboard, I like to cook, sail, and noodle on guitar.
 
 ---
 
-This site is build with Material for MkDocs. My projects are hosted by Netlify.
+This site is built with Material for MkDocs and hosted by Netlify.
 
 | Site | Status |
 | --- | --- |
