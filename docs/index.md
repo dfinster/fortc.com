@@ -11,21 +11,21 @@ hide:
 
 ![Image title](assets/media/profile/david-finster.jpg){ align=right loading=lazy }
 
-I'm good at solving tough IT and business problems, coding in many languages, writing and editing documentation, hardware repair, networking, and more. I learned my skills through my career at Levi Strauss & Co., Thomson Reuters, and Corel. In January 2004, my wife and I started an IT consulting business that served a variety of business and government clients for 16 years.
+I'm a guy who grew up in the BBS era solving tough IT problems. I worked for several large companies until 2004, when I left to start an IT consulting partnership with my wife. We primarily served clients with less than 50 employees, small city governments, public libraries, and police departments. 
 
-In Feb 2020, I started a fully-remote job for [**Vultr**](https://www.vultr.com), a cloud-computing company. They hired me as their Technical Editor and I've been promoted to Technical Communications Manager. I wrote their [**Style Guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**scores of articles**](https://www.vultr.com/docs/) in the documentation library.
+In February 2020 we decided to close our business, and I took a remote job at [**Vultr**](https://www.vultr.com) as their Technical Communications Manager. I wrote their [**Style Guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**scores of articles**](https://www.vultr.com/docs/). I publish my [**portfolio**](https://dfinr.notion.site) and reading list in Notion.
 
-I keep [**a portfolio of my recent writing**](https://dfinr.notion.site) in **Notion**, and other things I've written are on the menu. When I'm not at a keyboard I like to cook, sail, and noodle on guitar.
+When I'm not at a keyboard, I like to cook, sail, and noodle on guitar. I'm fair, excellent, and not very good at those, respectively.
 
 ## Recent Experiments
 
-I'm currently facinated with all things cloud, and static sites built around Markdown content. I'm exploring **React**, **Hugo**, **MkDocs**, and **Kubernetes**. 
+I'm currently working on the best way to migrate a legacy documentation system to a Docs-as-Code workflow. I'm exploring various technologies like **React**, **Hugo**, and **MkDocs**.
 
-* [**dadjoke.fortc.com**](https://dadjoke.fortc.com): A random joke website I wrote in React.
+* [**dadjoke.fortc.com**](https://dadjoke.fortc.com): A joke website I wrote in React.
 * [**random-quote.fortc.com**](https://random-quote.fortc.com): A random quote widget I made for Hugo.
-* This site is built with Material for MkDocs. It's less fussy than the Hugo site I built last year.
+* I built this site with [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
 
-Netlify hosts all these experiments on a free plan.
+I host these at Netlify on a free plan. In the past, I've also had success with Cloudflare Pages and GitHub Pages.
 
 | Site | Status |
 | --- | --- |
