@@ -7,26 +7,19 @@ hide:
   - footer
 ---
 
-# Hi, I'm David.
+# Hi, I'm David. <a rel="me" href="https://toad.social/@dfinr">:wave:</a>
 
 ![Image title](assets/media/profile/david-finster.jpg){ align=right loading=lazy }
 
-I'm skilled at solving technical problems and writing documentation. I'm often the person asked to solve issues when others have tried and failed. After honing my skills at Thomson Reuters, Levi Strauss and Corel, I launched my own consulting business in 2004. After nearly 16 years, I closed the business at the beginning of the pandemic.
+I'm good at solving tough IT and business problems, coding in many languages, writing and editing documentation, hardware repair, networking, and more. I learned my skills through my career at Levi Strauss & Co., Thomson Reuters, and Corel. In January 2004, my wife and I started an IT consulting business that served a variety of business and government clients for 16 years.
 
-As of March 2020, I manage the Technical Communications department at [Vultr](https://www.vultr.com). I wrote Vultr's [Style Guide](https://www.vultr.com/docs/vultr-docs-style-guide/), [API](https://www.vultr.com/api/) documentation, [scores of articles](https://www.vultr.com/docs/) in their library, and designed the [Vultr Docs creator program](https://www.vultr.com/docs/vultr-docs-program-guide).
+In Feb 2020, I started a fully-remote job for [Vultr](https://www.vultr.com), a cloud-computing company. They hired me as their Technical Editor and I've been promoted to Technical Communications Manager. I wrote their [Style Guide](https://www.vultr.com/docs/vultr-docs-style-guide/), [API documentation](https://www.vultr.com/api/), and [scores of articles](https://www.vultr.com/docs/) in the documentation library.
 
-When I'm not at a keyboard, I like to cook, sail, and noodle on guitar.
+Here's a [portfolio](https://dfinster.notion.site) of some of my recent writing, [my reading list](https://dfinster.notion.site), and you'll find links to other things I've written on the menu. I'm studying React, Hugo, and MkDocs, and Kubernetes. When I'm not at a keyboard I like to cook, sail, and noodle on guitar. 
 
-## Recent Projects and Articles
+## Recent Experiments
 
-* My [portfolio and reading list](https://dfinster.notion.site).
-* [Dad Jokes](https://dadjoke.fortc.com) &mdash; A React website I built for fun.
-* [Random Quotes for Hugo](https://random-quote.fortc.com/) &mdash; A Hugo shortcode and page widget.
-* [Pardo's Push](https://medium.com/@dfinr/pardos-push-6e589649aee7) &mdash; Lieutenant Colonel Bob Pardo had a birthday he’ll never forget in 1967.
-
----
-
-This site is built with Material for MkDocs and hosted by Netlify.
+This site is built with Material for MkDocs. I like it so far. It's less fussy than the Hugo site I built last year. I also wrote a React ["dad jokes"](https://dadjoke.fortc.com) and hacked together a [random quote widget](https://random-quote.fortc.com/) for Hugo. Netlify hosts all these experiments on a free plan.
 
 | Site | Status |
 | --- | --- |
