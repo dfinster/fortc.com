@@ -1,6 +1,6 @@
 ---
 title: About David
-revision_date: 2022-09-21
+revision_date: 2022-12-02
 hide:
   - navigation
   - toc
@@ -13,13 +13,19 @@ hide:
 
 I'm good at solving tough IT and business problems, coding in many languages, writing and editing documentation, hardware repair, networking, and more. I learned my skills through my career at Levi Strauss & Co., Thomson Reuters, and Corel. In January 2004, my wife and I started an IT consulting business that served a variety of business and government clients for 16 years.
 
-In Feb 2020, I started a fully-remote job for [Vultr](https://www.vultr.com), a cloud-computing company. They hired me as their Technical Editor and I've been promoted to Technical Communications Manager. I wrote their [Style Guide](https://www.vultr.com/docs/vultr-docs-style-guide/), [API documentation](https://www.vultr.com/api/), and [scores of articles](https://www.vultr.com/docs/) in the documentation library.
+In Feb 2020, I started a fully-remote job for [**Vultr**](https://www.vultr.com), a cloud-computing company. They hired me as their Technical Editor and I've been promoted to Technical Communications Manager. I wrote their [**Style Guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**scores of articles**](https://www.vultr.com/docs/) in the documentation library.
 
-Here's a [portfolio](https://dfinster.notion.site) of some of my recent writing, [my reading list](https://dfinster.notion.site), and you'll find links to other things I've written on the menu. I'm studying React, Hugo, and MkDocs, and Kubernetes. When I'm not at a keyboard I like to cook, sail, and noodle on guitar. 
+I keep [**a portfolio of my recent writing**](https://dfinr.notion.site) in **Notion**, and other things I've written are on the menu. When I'm not at a keyboard I like to cook, sail, and noodle on guitar.
 
 ## Recent Experiments
 
-This site is built with Material for MkDocs. I like it so far. It's less fussy than the Hugo site I built last year. I also wrote a React ["dad jokes"](https://dadjoke.fortc.com) and hacked together a [random quote widget](https://random-quote.fortc.com/) for Hugo. Netlify hosts all these experiments on a free plan.
+I'm currently facinated with all things cloud, and static sites built around Markdown content. I'm exploring **React**, **Hugo**, **MkDocs**, and **Kubernetes**. 
+
+* [**dadjoke.fortc.com**](https://dadjoke.fortc.com): A random joke website I wrote in React.
+* [**random-quote.fortc.com**](https://random-quote.fortc.com): A random quote widget I made for Hugo.
+* This site is built with Material for MkDocs. It's less fussy than the Hugo site I built last year.
+
+Netlify hosts all these experiments on a free plan.
 
 | Site | Status |
 | --- | --- |
