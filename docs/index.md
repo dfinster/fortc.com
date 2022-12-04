@@ -11,11 +11,11 @@ hide:
 
 ![Image title](assets/media/profile/david-finster.jpg){ align=right loading=lazy }
 
-I'm a guy who grew up in the BBS era solving tough IT problems. I worked for several large companies until 2004, when I left to start an IT consulting partnership with my wife. We primarily served clients with less than 50 employees, small city governments, public libraries, and police departments. 
+I'm the manager of technical communications at [**Vultr**](https://www.vultr.com), a public cloud infrastructure company. I wrote their [**style guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**many of their support articles**](https://www.vultr.com/docs/).
 
-In February 2020 we decided to close our business, and I took a remote job at [**Vultr**](https://www.vultr.com) as their Technical Communications Manager. I wrote their [**Style Guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**scores of articles**](https://www.vultr.com/docs/). I publish my [**portfolio**](https://dfinr.notion.site) and reading list in Notion.
+Before joining Vultr, my wife and I started an IT consulting partnership that served corporate and government clients for 16 years, until we closed it February 2020. Earlier in my career, I worked as a programmer for Levi Strauss & Co., Thomson Reuters, and Corel.
 
-When I'm not at a keyboard, I like to cook, sail, and noodle on guitar. I'm fair, excellent, and not very good at those, respectively.
+I publish my [**portfolio**](https://dfinr.notion.site) and reading list in Notion. When I'm not at a keyboard, I like to cook, sail, and play guitar.
 
 ## Recent Experiments
 
@@ -25,7 +25,7 @@ I'm currently working on the best way to migrate a legacy documentation system t
 * [**random-quote.fortc.com**](https://random-quote.fortc.com): A random quote widget I made for Hugo.
 * I built this site with [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
 
-I host these at Netlify on a free plan. In the past, I've also had success with Cloudflare Pages and GitHub Pages.
+I host these sites at Netlify.
 
 | Site | Status |
 | --- | --- |
