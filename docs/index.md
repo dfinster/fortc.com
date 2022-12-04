@@ -11,21 +11,17 @@ hide:
 
 ![Image title](assets/media/profile/david-finster.jpg){ align=right loading=lazy }
 
-I'm the manager of technical communications at [**Vultr**](https://www.vultr.com), a public cloud infrastructure company. I wrote their [**style guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**many of their support articles**](https://www.vultr.com/docs/).
-
-Before joining Vultr in February 2020, my wife and I ran an IT consulting partnership that served corporate and government clients for 16 years. Before that, I worked as a programmer for Levi Strauss & Co., Thomson Reuters, Corel, and was part owner in a hard drive repair and data recovery lab.
+I manage technical communications at [**Vultr**](https://www.vultr.com), a public cloud infrastructure company. I wrote their [**style guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**many of their support articles**](https://www.vultr.com/docs/).
 
 I publish my [**portfolio**](https://dfinr.notion.site) and reading list in Notion. When I'm not at a keyboard, I like to cook, sail, and play guitar.
 
 ## Recent Experiments
 
-I'm currently working on the best way to migrate a legacy documentation system to a Docs-as-Code workflow. I'm exploring various technologies like **React**, **Hugo**, and **MkDocs**.
+I'm exploring various Docs-as-Code workflow techniques.
 
 * [**dadjoke.fortc.com**](https://dadjoke.fortc.com): A joke website I wrote in React.
 * [**random-quote.fortc.com**](https://random-quote.fortc.com): A random quote widget I made for Hugo.
 * I built this site with [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
-
-I publish these experiemnts with Netlify and GitHub.
 
 | Site | Status | Repository |
 | --- | --- | --- |
