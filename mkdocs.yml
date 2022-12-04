@@ -21,6 +21,8 @@ theme:
   custom_dir: overrides
   logo: assets/logo/purplange.png
   favicon: assets/logo/purplange.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"

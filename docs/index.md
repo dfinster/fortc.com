@@ -1,6 +1,6 @@
 ---
 title: About David
-revision_date: 2022-12-02
+revision_date: 2022-12-04
 hide:
   - navigation
   - toc
@@ -13,7 +13,7 @@ hide:
 
 I'm the manager of technical communications at [**Vultr**](https://www.vultr.com), a public cloud infrastructure company. I wrote their [**style guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**many of their support articles**](https://www.vultr.com/docs/).
 
-Before joining Vultr, my wife and I started an IT consulting partnership that served corporate and government clients for 16 years, until we closed it February 2020. Earlier in my career, I worked as a programmer for Levi Strauss & Co., Thomson Reuters, and Corel.
+Before joining Vultr in February 2020, my wife and I ran an IT consulting partnership that served corporate and government clients for 16 years. Before that, I worked as a programmer for Levi Strauss & Co., Thomson Reuters, Corel, and was part owner in a hard drive repair and data recovery lab.
 
 I publish my [**portfolio**](https://dfinr.notion.site) and reading list in Notion. When I'm not at a keyboard, I like to cook, sail, and play guitar.
 
@@ -25,10 +25,10 @@ I'm currently working on the best way to migrate a legacy documentation system t
 * [**random-quote.fortc.com**](https://random-quote.fortc.com): A random quote widget I made for Hugo.
 * I built this site with [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
 
-I host these sites at Netlify.
+I publish these experiemnts with Netlify and GitHub.
 
-| Site | Status |
-| --- | --- |
-| [dadjoke.fortc.com](https://dadjoke.fortc.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/5a2ca453-3773-48c3-8ab3-37069cb60859/deploy-status)](https://app.netlify.com/sites/dfinrdadjoke/deploys) |
-| [random-quote.fortc.com](https://random-quote.fortc.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/57419fb7-eb0c-45ac-9134-bf870c5639bf/deploy-status)](https://app.netlify.com/sites/hugo-random-quotes/deploys) |
-| [www.fortc.com](https://www.fortc.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/e049f562-53c8-4abb-9a27-4e33f8712c42/deploy-status)](https://app.netlify.com/sites/fortc/deploys) |
+| Site | Status | Repository |
+| --- | --- | --- |
+| [dadjoke.fortc.com](https://dadjoke.fortc.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/5a2ca453-3773-48c3-8ab3-37069cb60859/deploy-status)](https://app.netlify.com/sites/react-dad-joke/deploys) | [:fontawesome-brands-github: github.com/dfinster/dadjoke](https://github.com/dfinster/dadjoke) |
+| [random-quote.fortc.com](https://random-quote.fortc.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/57419fb7-eb0c-45ac-9134-bf870c5639bf/deploy-status)](https://app.netlify.com/sites/hugo-random-quotes/deploys) | [:fontawesome-brands-github: github.com/dfinster/hugo-random-quotes](https://github.com/dfinster/hugo-random-quotes) |
+| [www.fortc.com](https://www.fortc.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/e049f562-53c8-4abb-9a27-4e33f8712c42/deploy-status)](https://app.netlify.com/sites/fortc/deploys) | [:fontawesome-brands-github: github.com/dfinster/fortc.com](https://github.com/dfinster/fortc.com) |
