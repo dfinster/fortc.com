@@ -1,6 +1,6 @@
 ---
 title: About David
-revision_date: 2022-12-04
+revision_date: 2022-12-09
 hide:
   - navigation
   - toc
@@ -9,19 +9,12 @@ hide:
 
 # Hi, I'm David. <a rel="me" href="https://toad.social/@dfinr">:wave:</a>
 
-![Image title](assets/media/profile/david-finster.jpg){ align=right loading=lazy }
+When I'm not at a keyboard, I like to cook, sail, and play guitar.
 
-I manage technical communications at [**Vultr**](https://www.vultr.com), a public cloud infrastructure company. I wrote their [**style guide**](https://www.vultr.com/docs/vultr-docs-style-guide/), [**API documentation**](https://www.vultr.com/api/), and [**many of their support articles**](https://www.vultr.com/docs/).
-
-I publish my [**portfolio**](https://dfinr.notion.site) and reading list in Notion. When I'm not at a keyboard, I like to cook, sail, and play guitar.
-
-## Recent Experiments
-
-I'm exploring various Docs-as-Code workflow techniques.
-
-* [**dadjoke.fortc.com**](https://dadjoke.fortc.com): A joke website I wrote in React.
-* [**random-quote.fortc.com**](https://random-quote.fortc.com): A random quote widget I made for Hugo.
-* I built this site with [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
+* [dfinr.notion.site](https://dfinr.notion.site): My portfolio and reading list in Notion.
+* [dadjoke.fortc.com](https://dadjoke.fortc.com): A joke website I wrote in React.
+* [random-quote.fortc.com](https://random-quote.fortc.com): A random quote widget I made for Hugo.
+* I built this site with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 | Site | Status | Repository |
 | --- | --- | --- |
