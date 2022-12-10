@@ -11,7 +11,7 @@ hide:
 
 When I'm not at a keyboard, I like to cook, sail, and play guitar.
 
-* [dfinr.notion.site](https://dfinr.notion.site): My portfolio and reading list in Notion.
+* [dfinster.notion.site](https://dfinster.notion.site): My portfolio and reading list in Notion.
 * [dadjoke.fortc.com](https://dadjoke.fortc.com): A joke website I wrote in React.
 * [random-quote.fortc.com](https://random-quote.fortc.com): A random quote widget I made for Hugo.
 * I built this site with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
