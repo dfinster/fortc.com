@@ -7,12 +7,12 @@ hide:
   - footer
 ---
 
-# Hi, I'm David. <a rel="me" href="https://toad.social/@dfinr">:wave:</a>
+# Hi, I'm David.
 
-When I'm not at a keyboard, I like to cook, sail, and play guitar.
+I'm a tech writer and IT consultant. When I'm not at a keyboard, I like to cook, sail, and play guitar.
 
 * [dfinster.notion.site](https://dfinster.notion.site): My portfolio and reading list in Notion.
-* [dadjoke.fortc.com](https://dadjoke.fortc.com): A joke website I wrote in React.
+* [dadjoke.fortc.com](https://dadjoke.fortc.com): A random dad-joke website I wrote in React.
 * [random-quote.fortc.com](https://random-quote.fortc.com): A random quote widget I made for Hugo.
 * I built this site with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
