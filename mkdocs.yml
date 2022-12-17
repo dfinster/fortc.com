@@ -9,7 +9,6 @@ edit_uri: ""
 
 nav:
   - 'About David': index.md
-  - 'Medium': https://medium.com/@dfinster
   - 'DEV': https://dev.to/dfinster
   - 'LinkedIn': https://www.linkedin.com/in/dfinster
 #  - 'Articles': /site/tags/
@@ -89,9 +88,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/dfinster
       name: GitHub
-    - icon: fontawesome/brands/medium
-      link: https://medium.com/@dfinster
-      name: Medium
     - icon: fontawesome/brands/dev
       link: https://dev.to/dfinster
       name: DEV

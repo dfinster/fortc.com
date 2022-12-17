@@ -11,5 +11,3 @@ hide:
 [TAGS]
 
 ---
-
-> :point_right: &nbsp; You'll find more articles [on Medium](https://medium.com/@dfinster) and my [Notion content tracker](https://dfinster.notion.site/).
