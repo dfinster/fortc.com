@@ -1,0 +1,34 @@
+# mkwww.sh v2.1 for [fortc.com](https://fortc.com)
+
+`mkwww.sh`, and the contents of `/static` and `/templates` are [MIT license](./LICENSE).
+
+Blog content is Copyright (C) 2025 David Finster
+
+## Description
+
+A minimal static Markdown-to-HTML blog generator. It's the dumbest thing that could possible work.
+
+- Converts Markdown in `/posts` to static HTML in `/output`
+- Sorts the posts in reverse order from the frontmatter date
+- Undated posts render at the end of the list in whatever order
+- Subtitles are optional frontmatter
+- Designed to deploy at Cloudflare
+
+## Prerequisites
+
+To run `mkwww.sh`, you’ll need to:
+
+- Set `config.sh` to your values
+- Install [Pandoc](https://github.com/jgm/pandoc)
+- Have a `bash` shell with `awk`, `sed`, and other other typical GNU tools
+- Set `"$CF_PAGES" = "true"` in Cloudflare build configuration to auto-install Pandoc in the build container.
+
+## Usage
+
+Run the script in the repo's root:
+
+```bash
+$ ./mkwww.sh
+```
+
+View local output in a browser: `./output/index.html`

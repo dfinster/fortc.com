@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root"
+    },
+    {
+      "path": "output",
+      "name": "Output"
+    },
+    {
+      "path": "posts",
+      "name": "Posts"
+    },
+  ],
+  "settings": {}
+}

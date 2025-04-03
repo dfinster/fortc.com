@@ -1,0 +1,141 @@
+/* MIT License (c) 2025 David Finster david@fortc.com */
+:root {
+  --color-background: #fff;
+  --color-text: #333;
+  --color-secondary-text: #555;
+  --color-border: #ccc;
+  --color-link: #41006f;
+  --color-link-hover: #2c004c;
+  --color-logo: #2c004c;
+}
+
+body {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.4;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+header[role="banner"] {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+header[role="banner"] a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+  color: var(--color-link);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.site_name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+article > header {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-secondary-text);
+  margin: 0 0 .25rem 0;
+}
+
+time {
+  font-size: 0.9rem;
+  color: var(--color-secondary-text);
+}
+
+main {
+  margin: 1rem 0;
+}
+
+article p {
+  margin: 0.5rem 0 1rem 0;
+  text-align: justify;
+}
+
+.date {
+  margin: 0;
+  text-align: justify;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 2rem 0 0 0;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+ul, ol {
+  margin: 1.25rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  line-height: 1.75;
+}
+
+li a {
+  font-size: 1.25rem;
+}
+
+.list-date {
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+
+footer {
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+}

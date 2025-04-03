@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="%%DESCRIPTION%%">
+  <meta name="author" content="%%AUTHOR%%">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="$title$">
+  <meta property="og:description" content="%%DESCRIPTION%%">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="%%CANONICAL_PAGE%%">
+  <link rel="canonical" href="%%CANONICAL_PAGE%%">
+  <title>fortc.com: $title$</title>
+  <link rel="stylesheet" href="%%CACHE_BUSTER_STYLE%%">
+</head>
+<body>
+<header role="banner" aria-label="Site branding">
+  <h1 class="site_name"><a href="index.html">%%SITE_NAME%%</a></h1>
+</header>
+<main>
+  <article>
+    <header>
+      <h2 class="title">$title$</h2>
+      <p class="subtitle">$subtitle$</p>
+      <p class="date"><time datetime="$date$">$date$</time></p>
+    </header>
+    $body$
+  </article>
+</main>
+<footer>
+  <p><a href="index.html" rel="home">Return to homepage</a></p>
+  <p><small>%%COPYRIGHT%%</small></p>
+</footer>
+</body>
+</html>

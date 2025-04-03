@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="%%DESCRIPTION%%">
+  <meta name="author" content="%%AUTHOR%%">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="%%SITE_NAME%% by %%AUTHOR%%">
+  <meta property="og:description" content="%%DESCRIPTION%%">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://%%SITE_NAME%%/index.html">
+  <link rel="canonical" href="https://%%SITE_NAME%%/index.html">
+  <title>%%SITE_NAME%% by %%AUTHOR%%</title>
+  <link rel="stylesheet" href="%%CACHE_BUSTER_STYLE%%">
+</head>
+<body>
+<header role="banner" aria-label="Site branding">
+  <h1 class="site_name">%%SITE_NAME%%</h1>
+</header>
+<main>
+<article>
+<ul>
