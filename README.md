@@ -2,11 +2,13 @@
 
 `mkwww.sh`, and the contents of `/static` and `/templates` are [MIT license](./LICENSE).
 
-Blog content is Copyright (C) 2025 David Finster
+Blog content is Copyright (c) 2025 David Finster
 
 ## Description
 
-A minimal static Markdown-to-HTML blog generator. It's the dumbest thing that could possible work.
+A minimal static Markdown-to-HTML blog generator.
+
+It's the dumbest thing that could possibly work.
 
 - Converts Markdown in `/posts` to static HTML in `/output`
 - Sorts the posts in reverse order from the frontmatter date
@@ -31,4 +33,4 @@ Run the script in the repo's root:
 $ ./mkwww.sh
 ```
 
-View local output in a browser: `./output/index.html`
+View the local output in a browser: `./output/index.html`

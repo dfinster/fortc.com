@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# MIT License (c) 2025 David Finster david@fortc.com
+# MIT License (c) 2025 David Finster
+
 set -euo pipefail
 
 init_script() {

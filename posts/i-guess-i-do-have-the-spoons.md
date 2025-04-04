@@ -3,7 +3,7 @@ title: I Guess I _Do_ Have the Spoons for That
 subtitle: ..and a fork, as it turns out.
 date: 2025-04-01
 ---
-"[I don't have the spoons for that](https://en.wikipedia.org/wiki/Spoon_theory)," some declare when energy is low. Well, according [to Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/the-human-brain-may-contain-as-much-as-a-spoons-worth-of-microplastics-new-research-suggests-180985995/), maybe the spoon is the problem:
+"[I don't have the spoons for that](https://en.wikipedia.org/wiki/Spoon_theory)," some of you may declare when your energy is low. Well, according [to Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/the-human-brain-may-contain-as-much-as-a-spoons-worth-of-microplastics-new-research-suggests-180985995/), maybe the spoon is the problem:
 
 > The human brain may contain up to a spoon’s worth of tiny plastic shards—not a spoonful, but the same weight (about seven grams) as a plastic spoon, according to new findings published Monday in the journal [*Nature Medicine*](https://www.nature.com/articles/s41591-024-03453-1).
 >

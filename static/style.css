@@ -1,12 +1,15 @@
-/* MIT License (c) 2025 David Finster david@fortc.com */
+/* MIT License (c) 2025 David Finster */
 :root {
-  --color-background: #fff;
-  --color-text: #333;
-  --color-secondary-text: #555;
-  --color-border: #ccc;
-  --color-link: #41006f;
-  --color-link-hover: #2c004c;
-  --color-logo: #2c004c;
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-secondary-text: #555555;
+  --color-border: #cccccc;
+  --color-link: #333333;
+  --color-link-hover: #333333;
+  --color-logo: #303030;
+  --text-decoration: #888888;
+  --blockquote-background: #f9f9f9;
+  --blockquote-border-left: #cccccc;
 }
 
 body {
@@ -18,6 +21,15 @@ body {
   line-height: 1.4;
   background: var(--color-background);
   color: var(--color-text);
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid var(--blockquote-border-left);
+  background-color: var(--blockquote-background);
+  font-style: italic;
+  color: var(--color-secondary-text);
 }
 
 header[role="banner"] {
@@ -33,13 +45,17 @@ header[role="banner"] a {
 }
 
 a {
-  text-decoration: underline dotted;
+  text-decoration: underline;
   text-underline-offset: 0.15em;
+  text-decoration-color: var(--text-decoration);
+  text-decoration-style: dotted;
   color: var(--color-link);
 }
 
 a:hover {
   text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-color: var(--text-decoration);
   color: var(--color-link-hover);
 }
 

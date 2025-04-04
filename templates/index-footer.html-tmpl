@@ -2,7 +2,7 @@
 </article>
 </main>
 <footer>
-    <p><small>%%COPYRIGHT%%</small></p>
+  <p><a href="about.html">About</a> | %%COPYRIGHT%%</p>
 </footer>
 </body>
 </html>
