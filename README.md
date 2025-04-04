@@ -1,9 +1,5 @@
 # mkwww.sh v2.1 for [fortc.com](https://fortc.com)
 
-`mkwww.sh`, and the contents of `/static` and `/templates` are [MIT license](./LICENSE).
-
-Blog content is Copyright (c) 2025 David Finster
-
 ## Description
 
 A minimal static Markdown-to-HTML blog generator.
@@ -18,7 +14,7 @@ It's the dumbest thing that could possibly work.
 
 ## Prerequisites
 
-To run `mkwww.sh`, you’ll need to:
+To run `mkwww.sh`:
 
 - Set `config.sh` to your values
 - Install [Pandoc](https://github.com/jgm/pandoc)
@@ -34,3 +30,9 @@ $ ./mkwww.sh
 ```
 
 View the local output in a browser: `./output/index.html`
+
+## License
+
+`mkwww.sh`, and the contents of `/static` and `/templates` are [MIT license](./LICENSE).
+
+[fortc.com](https://fortc.com) blog content is Copyright (c) 2025 David Finster
