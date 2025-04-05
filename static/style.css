@@ -1,14 +1,14 @@
 /* MIT License (c) 2025 David Finster */
 :root {
-  --color-background: #ffffff;
-  --color-text: #333333;
-  --color-secondary-text: #555555;
-  --color-border: #cccccc;
+  --color-background: rgb(255, 255, 255);
+  --color-text: rgb(51, 51, 51);
+  --color-secondary-text: rgb(85, 85, 85);
+  --color-border: rgb(204, 204, 204);
   --color-link: rgb(100, 0, 150);
   --color-link-hover: rgb(100, 0, 150);
-  --color-logo: #303030;
-  --blockquote-background: #f9f9f9;
-  --blockquote-border-left: #cccccc;
+  --color-logo: rgb(48, 48, 48);
+  --blockquote-background: rgb(249, 249, 249);
+  --blockquote-border-left: rgb(204, 204, 204);
 }
 
 body {
