@@ -4,10 +4,9 @@
   --color-text: #333333;
   --color-secondary-text: #555555;
   --color-border: #cccccc;
-  --color-link: #333333;
-  --color-link-hover: #333333;
+  --color-link: rgb(100, 0, 150);
+  --color-link-hover: rgb(100, 0, 150);
   --color-logo: #303030;
-  --text-decoration: #888888;
   --blockquote-background: #f9f9f9;
   --blockquote-border-left: #cccccc;
 }
@@ -16,20 +15,13 @@ body {
   max-width: 750px;
   margin: 0 auto;
   padding: 0 1rem;
-  font-family: "Times New Roman", Georgia, serif;
-  font-size: 18px;
-  line-height: 1.4;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.75;
   background: var(--color-background);
   color: var(--color-text);
-}
-
-blockquote {
-  margin: 1em 0;
-  padding: 1em 1.5em;
-  border-left: 4px solid var(--blockquote-border-left);
-  background-color: var(--blockquote-background);
-  font-style: italic;
-  color: var(--color-secondary-text);
 }
 
 header[role="banner"] {
@@ -37,6 +29,7 @@ header[role="banner"] {
   justify-content: space-between;
   padding: 0;
   border-bottom: 1px solid var(--color-border);
+  line-height: 1.25;
 }
 
 header[role="banner"] a {
@@ -46,55 +39,57 @@ header[role="banner"] a {
 
 a {
   text-decoration: underline;
-  text-underline-offset: 0.15em;
-  text-decoration-color: var(--text-decoration);
   text-decoration-style: dotted;
+  text-underline-offset: 0.15em;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 1px;
   color: var(--color-link);
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-  text-decoration-color: var(--text-decoration);
+  text-decoration: none;
   color: var(--color-link-hover);
 }
 
-.no-decoration {
+.menu a {
   text-decoration: none;
 }
 
-.site_name {
+.site-name {
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-link);
+  color: var(--color-text);
   text-decoration: none;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
-article > header {
-  margin: 0;
-  padding-bottom: 1rem;
+article>header {
+  margin: 0 0 1rem 0;
+  line-height: 1.25;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   letter-spacing: -0.02em;
   color: var(--color-text);
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  font-style: italic;
+  font-size: .9rem;
+  font-weight: 300;
   color: var(--color-secondary-text);
-  margin: 0 0 .25rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
-time {
+.date {
   font-size: 0.9rem;
+  font-weight: 500;
   color: var(--color-secondary-text);
+  margin: 0 0 0.5rem 0;
 }
 
 main {
@@ -103,36 +98,50 @@ main {
 
 article p {
   margin: 0.5rem 0 1rem 0;
-  text-align: justify;
 }
 
-.date {
-  margin: 0;
-  text-align: justify;
-}
-
-h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 2rem 0 0 0;
   font-weight: bold;
   color: var(--color-text);
+  line-height: 1.25;
 }
 
-ul, ol {
-  margin: 1.25rem 0;
+blockquote {
+  margin: 1em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid var(--blockquote-border-left);
+  background-color: var(--blockquote-background);
+  font-weight: 300;
+  color: var(--color-secondary-text);
+}
+
+strong {
+  font-weight: 900;
+}
+
+.article-list {
+  margin: 0 0 .25rem 0;
   padding-left: 1.5rem;
+  line-height: 1.25;
+  font-size: 1rem;
+  color: var(--color-text);
 }
 
-li {
-  line-height: 1.75;
+.article-list a {
+  text-decoration: none;
+  color: var(--color-link);
 }
 
-li a {
-  font-size: 1.25rem;
-}
-
-.list-date {
-  font-size: 0.95rem;
-  margin-left: 0.5rem;
+.article-list a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: var(--color-link-hover);
 }
 
 footer {
@@ -151,7 +160,9 @@ footer a {
   text-decoration: none;
 }
 
-img, iframe, video {
+img,
+iframe,
+video {
   max-width: 100%;
   height: auto;
 }

@@ -6,17 +6,20 @@
   <meta name="description" content="%%DESCRIPTION%%">
   <meta name="author" content="%%AUTHOR%%">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="%%SITE_NAME%% by %%AUTHOR%%">
+  <meta property="og:title" content="%%SITE_NAME%%">
   <meta property="og:description" content="%%DESCRIPTION%%">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://%%SITE_NAME%%/index.html">
-  <link rel="canonical" href="https://%%SITE_NAME%%/index.html">
-  <title>%%SITE_NAME%% by %%AUTHOR%%</title>
+  <meta property="og:url" content="%%CANONICAL_HOST%%/index.html">
+  <link rel="canonical" href="%%CANONICAL_HOST%%/index.html">
+  <title>%%SITE_NAME%%</title>
   <link rel="stylesheet" href="%%CACHE_BUSTER_STYLE%%">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header role="banner" aria-label="Site branding">
-  <h1 class="site_name">%%SITE_NAME%%</h1>
+  <div class="site-name">%%SITE_NAME%%</div>
 </header>
 <main>
 <article>
