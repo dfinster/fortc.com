@@ -63,6 +63,7 @@ initialize_output() {
   rm -rf output
   mkdir -p output
   cp -r static/* output/
+  cp -r posts/_media output/
 }
 
 # Make temporary list for sorting

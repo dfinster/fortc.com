@@ -1,5 +1,5 @@
 ---
-title: I Have the Spoons for That
+title: I Got The Spoon Blues
 subtitle: ...and maybe a fork, too.
 date: 2025-04-01
 ---
@@ -23,4 +23,4 @@ After I broke a tine off of a plastic fork and added it to the scale, I had 7 gr
 
 > **“I have yet to encounter a single human being who says, ‘There’s a bunch of plastic in my brain and I’m totally cool with that,’”** says study co-author [Matthew Campen](https://hsc.unm.edu/directory/campen-matthew-j.html), a toxicologist at the University of New Mexico, in a [statement](https://hsc.unm.edu/news/2025/02/hsc-newsroom-post-microplastics-human-brains.html).
 
-**[mic drop]** 🎤
+[I've got The Spoon Blues](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8).
