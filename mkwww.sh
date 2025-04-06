@@ -25,13 +25,28 @@ replace_in_file() {
   fi
 }
 
+# {{youtube:VIDEO_ID}} shortcode
+youtube_shortcode() {
+  local file="$1"
+  local pattern='\{\{youtube:([a-zA-Z0-9_-]+)\}\}'
+  local video_shortcode video_id template replacement
+  # Loop while a YouTube shortcode exists in the file
+  while video_shortcode=$(grep -Eo "$pattern" "$file" | head -n 1); do
+    # Extract the video ID from the shortcode
+    video_id=$(echo "$video_shortcode" | sed -E 's/\{\{youtube:([a-zA-Z0-9_-]+)\}\}/\1/')
+    template=$(cat templates/youtube-shortcode.tmpl)
+    replacement=$(echo "$template" | sed "s/%%YOUTUBE_ID%%/$video_id/g")
+    replace_in_file "$file" "$video_shortcode" "$replacement"
+  done
+}
+
 # Create links to posts
 build_index_item() {
   local file="$1"
   local title="$2"
   local date="$3"
   local template
-  template=$(cat templates/index-item.html-tmpl)
+  template=$(cat templates/index-item.tmpl)
   local link_path="${file%.html}"
   template=$(echo "$template" | sed "s|%%FILE%%|$link_path|g")
   template=$(echo "$template" | sed "s|%%TITLE%%|$title|g")
@@ -79,7 +94,7 @@ create_temp_list() {
 
 # Init index.html and cache bust the CSS
 create_index_header() {
-  sed "s|style.css|style.css?v=$CACHE_VERSION|g" templates/index-header.html-tmpl > "$INDEX_FILE"
+  sed "s|style.css|style.css?v=$CACHE_VERSION|g" templates/index-header.tmpl > "$INDEX_FILE"
 }
 
 generate_posts() {
@@ -103,10 +118,12 @@ generate_posts() {
     fi
     log_info "Building: $output_file $display_date"
 
-    # Create the blog post
-    "$PANDOC_BIN" "$file" --template=templates/post.html-tmpl -s -o "$output_file"
+    "$PANDOC_BIN" "$file" --template=templates/post.tmpl -s -o "$output_file"
 
-    # Search and replace vars in each post
+    # Shortcodes
+    youtube_shortcode "$output_file"
+
+    # Variables
     replace_in_file "$output_file" '%%CANONICAL_PAGE%%' "$CANONICAL_HOST$filename"
     replace_in_file "$output_file" '%%CACHE_BUSTER_STYLE%%' "style.css?v=$CACHE_VERSION"
     replace_in_file "$output_file" '%%AUTHOR%%' "$AUTHOR"
@@ -126,7 +143,7 @@ generate_posts() {
 
 create_index_footer() {
   # Write the index footer
-  cat templates/index-footer.html-tmpl >> "$INDEX_FILE"
+  cat templates/index-footer.tmpl >> "$INDEX_FILE"
   # Search and replace vars in index.html
   replace_in_file "$INDEX_FILE" '%%CACHE_BUSTER_STYLE%%' "style.css?v=$CACHE_VERSION"
   replace_in_file "$INDEX_FILE" '%%AUTHOR%%' "$AUTHOR"

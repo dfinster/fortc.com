@@ -25,4 +25,4 @@ A spoon, plus most of a fork. _In your brain._
 
 [I got the Spoon Blues](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8).
 
-[![The Spoon Blues](./_media/TheSpoonBlues@0.5x.jpg)](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8)
+{{youtube:pWzSYIOdBwk}}
