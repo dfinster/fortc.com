@@ -1,12 +1,13 @@
 ## Copyright Notice
 
-Unless otherwise noted below, all contents of this repository are Copyright 2025 David Finster. All rights reserved.
+Unless otherwise noted below, all contents of this repository are
+Copyright 2025 David Finster. All rights reserved.
 
 ## Exceptions (MIT Licensed)
 
-- mkwww.sh
-- config.sh
-- All files in the /static/ and /templates/ directories
+- [`mkwww.sh`](./mkwww.sh)
+- [`config.sh`](./config.sh)
+- All files in the [`/static/`](./static/) and [`/templates/`](./templates/) directories
 
 MIT License
 
