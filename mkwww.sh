@@ -13,6 +13,11 @@ log_error() {
   echo -e "\033[1;31m[ERROR]\033[0m $1" >&2
 }
 
+# Check if running on Cloudflare Pages
+is_cloudflare() {
+  [ "${CF_PAGES:-}" = "true" ]
+}
+
 # Cross-platform sed replacement
 replace_in_file() {
   local filepath="$1"
@@ -54,11 +59,11 @@ build_index_item() {
   echo "$template"
 }
 
-# Find Pandoc install or install in Cloudflare
+# Find Pandoc or install if is_cloudflare()
 detect_pandoc() {
   if command -v pandoc >/dev/null 2>&1; then
     PANDOC_BIN="pandoc"
-  elif [ "${CF_PAGES:-}" = "true" ]; then
+  elif is_cloudflare; then
     PANDOC_DIR="./pandoc-bin"
     # Latest version as of April 2025
     PANDOC_VER="3.6.4"
@@ -157,6 +162,14 @@ cleanup_after_build() {
   rm "$temp_list"
 }
 
+serve_site() {
+  if is_cloudflare; then
+    return 0
+  fi
+  log_info "Starting development server..."
+  python3 dev-server.py
+}
+
 main() {
   init_script
   detect_pandoc
@@ -168,3 +181,6 @@ main() {
 }
 
 main
+if ! is_cloudflare; then
+  serve_site
+fi

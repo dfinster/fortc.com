@@ -1,3 +1,5 @@
 # Custom Dictionary Words
 Finster
 frontmatter
+PANDOC
+tmpl
