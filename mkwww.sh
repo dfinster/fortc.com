@@ -32,7 +32,8 @@ build_index_item() {
   local date="$3"
   local template
   template=$(cat templates/index-item.html-tmpl)
-  template=$(echo "$template" | sed "s|%%FILE%%|$file|g")
+  local link_path="${file%.html}"
+  template=$(echo "$template" | sed "s|%%FILE%%|$link_path|g")
   template=$(echo "$template" | sed "s|%%TITLE%%|$title|g")
   template=$(echo "$template" | sed "s|%%DATE%%|$date|g")
   echo "$template"
@@ -106,7 +107,7 @@ generate_posts() {
     "$PANDOC_BIN" "$file" --template=templates/post.html-tmpl -s -o "$output_file"
 
     # Search and replace vars in each post
-    replace_in_file "$output_file" '%%CANONICAL_PAGE%%' "$CANONICAL_HOST$filename.html"
+    replace_in_file "$output_file" '%%CANONICAL_PAGE%%' "$CANONICAL_HOST$filename"
     replace_in_file "$output_file" '%%CACHE_BUSTER_STYLE%%' "style.css?v=$CACHE_VERSION"
     replace_in_file "$output_file" '%%AUTHOR%%' "$AUTHOR"
     replace_in_file "$output_file" '%%DESCRIPTION%%' "$DESCRIPTION"
@@ -115,7 +116,7 @@ generate_posts() {
 
     # Only add to index if not unlisted
     if [ "$unlisted" != "true" ]; then
-      index_item=$(build_index_item "$filename.html" "$title" "$display_date")
+      index_item=$(build_index_item "$filename" "$title" "$display_date")
       echo "$index_item" >> "$INDEX_FILE"
     else
       log_info "\033[1;90m↳ Unlisted page\033[0m"

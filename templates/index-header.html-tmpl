@@ -9,8 +9,8 @@
   <meta property="og:title" content="%%SITE_NAME%%">
   <meta property="og:description" content="%%DESCRIPTION%%">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="%%CANONICAL_HOST%%/index.html">
-  <link rel="canonical" href="%%CANONICAL_HOST%%/index.html">
+  <meta property="og:url" content="%%CANONICAL_HOST%%">
+  <link rel="canonical" href="%%CANONICAL_HOST%%">
   <title>%%SITE_NAME%%</title>
   <link rel="stylesheet" href="%%CACHE_BUSTER_STYLE%%">
   <link rel="preconnect" href="https://fonts.googleapis.com">
