@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
 # MIT License (c) 2025 David Finster
 
+# Set up environment and logging
 set -euo pipefail
-
 init_script() {
-  # Load configuration
   source config.sh
 }
-
 log_info() {
   echo -e "\033[1;34m[INFO]\033[0m $1"
 }
-
 log_error() {
   echo -e "\033[1;31m[ERROR]\033[0m $1" >&2
 }
@@ -28,24 +25,26 @@ replace_in_file() {
   fi
 }
 
+# Create links to posts
 build_index_item() {
-  local file_html="$1"
+  local file="$1"
   local title="$2"
   local date="$3"
   local template
   template=$(cat templates/index-item.html-tmpl)
-  template=$(echo "$template" | sed "s|%%FILE%%|$file_html|g")
+  template=$(echo "$template" | sed "s|%%FILE%%|$file|g")
   template=$(echo "$template" | sed "s|%%TITLE%%|$title|g")
   template=$(echo "$template" | sed "s|%%DATE%%|$date|g")
   echo "$template"
 }
 
-# Find Pandoc install, or install in Cloudflare Linux container
+# Find Pandoc install or install in Cloudflare
 detect_pandoc() {
   if command -v pandoc >/dev/null 2>&1; then
     PANDOC_BIN="pandoc"
   elif [ "${CF_PAGES:-}" = "true" ]; then
     PANDOC_DIR="./pandoc-bin"
+    # Latest version as of April 2025
     PANDOC_VER="3.6.4"
     log_info "Running in Cloudflare Pages."
     log_info "Installing Pandoc $PANDOC_VER."
@@ -63,7 +62,6 @@ initialize_output() {
   rm -rf output
   mkdir -p output
   cp -r static/* output/
-  cp -r posts/_media output/
 }
 
 # Make temporary list for sorting
@@ -73,6 +71,7 @@ create_temp_list() {
   for file in posts/*.md; do
     local date
     date=$(awk '/^date:/ {print $2}' "$file")
+    # if no date in frontmatter, set it to zeros in temp_file.
     if [ -z "$date" ]; then
       date="0000-00-00"
     fi
@@ -81,13 +80,15 @@ create_temp_list() {
   echo "$temp_file"
 }
 
+# Init index.html and cache bust the CSS
 create_index_header() {
   sed "s|style.css|style.css?v=$CACHE_VERSION|g" templates/index-header.html-tmpl > "$INDEX_FILE"
 }
 
 generate_posts() {
-  # Pre-process list of posts
+  # Get the list of posts
   temp_list=$(create_temp_list)
+
   # Sort by date descending (newest first)
   sort -r "$temp_list" | while IFS='|' read -r date file; do
     filename=$(basename "$file" .md)
@@ -97,6 +98,7 @@ generate_posts() {
     title=$(awk '/^title:/ {print substr($0, index($0,$2))}' "$file")
     unlisted=$(awk '/^unlisted:/ {print $2}' "$file")
 
+    # If it's zeros in the temp file, null it out.
     if [ "$date" = "0000-00-00" ]; then
       display_date=""
     else
