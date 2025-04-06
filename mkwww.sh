@@ -3,6 +3,8 @@
 
 # Set up environment and logging
 set -euo pipefail
+trap 'log_error "Build interrupted or error occurred."; exit 1' ERR INT
+
 init_script() {
   source config.sh
 }
@@ -162,7 +164,7 @@ cleanup_after_build() {
   rm "$temp_list"
 }
 
-main() {
+build_site() {
   init_script
   detect_pandoc
   initialize_output
@@ -170,6 +172,44 @@ main() {
   generate_posts
   create_index_footer
   cleanup_after_build
+}
+
+main() {
+
+  # If Cloudflare Pages, bypass debouncing
+  if is_cloudflare; then
+      log_info "Starting build in Cloudflare environment."
+      build_site
+      exit 0
+  fi
+
+  # Debouncing logic
+  LOCKDIR="./.mkwww.lock"
+  PENDINGFILE="./.mkwww.pending"
+  DEBOUNCE_DELAY=1
+
+  if mkdir "$LOCKDIR" 2>/dev/null; then
+      echo "Lock acquired."
+  else
+      echo "Build already in progress, marking pending build."
+      touch "$PENDINGFILE"
+      exit 0
+  fi
+
+  # Build loop
+  while true; do
+      sleep "$DEBOUNCE_DELAY"
+      build_site
+      if [ -f "$PENDINGFILE" ]; then
+          echo "Pending build detected. Restarting build process."
+          rm -f "$PENDINGFILE"
+      else
+          break
+      fi
+  done
+
+  # Release the lock
+  rmdir "$LOCKDIR"
 }
 
 main
