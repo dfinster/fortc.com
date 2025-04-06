@@ -162,14 +162,6 @@ cleanup_after_build() {
   rm "$temp_list"
 }
 
-serve_site() {
-  if is_cloudflare; then
-    return 0
-  fi
-  log_info "Starting development server..."
-  python3 dev-server.py
-}
-
 main() {
   init_script
   detect_pandoc
@@ -181,6 +173,3 @@ main() {
 }
 
 main
-if ! is_cloudflare; then
-  serve_site
-fi
