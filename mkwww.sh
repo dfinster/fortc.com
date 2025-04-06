@@ -71,10 +71,6 @@ create_temp_list() {
   for file in posts/*.md; do
     local date
     date=$(awk '/^date:/ {print $2}' "$file")
-    # if no date in frontmatter, set it to zeros in temp_file.
-    if [ -z "$date" ]; then
-      date="0000-00-00"
-    fi
     echo "$date|$file" >> "$temp_file"
   done
   echo "$temp_file"
@@ -89,8 +85,8 @@ generate_posts() {
   # Get the list of posts
   temp_list=$(create_temp_list)
 
-  # Sort by date descending (newest first)
-  sort -r "$temp_list" | while IFS='|' read -r date file; do
+  # Sort: entries with dates first (descending), then undated
+  sort -r -t '|' -k1,1 "$temp_list" | while IFS='|' read -r date file; do
     filename=$(basename "$file" .md)
     output_file="output/$filename.html"
 
@@ -99,7 +95,7 @@ generate_posts() {
     unlisted=$(awk '/^unlisted:/ {print $2}' "$file")
 
     # If it's zeros in the temp file, null it out.
-    if [ "$date" = "0000-00-00" ]; then
+    if [ -z "$date" ]; then
       display_date=""
     else
       display_date="($date)"
