@@ -19,10 +19,10 @@ _(Also, please don’t ask why I have a super-sensitive scale with calibration w
 
 After I broke a tine off of a plastic fork and added it to the scale, I had 7 grams of plastic.
 
-A spoon, plus most of a fork. _In your brain._ [I got the Spoon Blues](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8).
+A spoon, plus most of a fork. _In your brain._
 
 > **“I have yet to encounter a single human being who says, ‘There’s a bunch of plastic in my brain and I’m totally cool with that,’”** says study co-author [Matthew Campen](https://hsc.unm.edu/directory/campen-matthew-j.html), a toxicologist at the University of New Mexico, in a [statement](https://hsc.unm.edu/news/2025/02/hsc-newsroom-post-microplastics-human-brains.html).
 
-[![The Spoon Blues](./_media/TheSpoonBlues@0.5x.jpg)](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8)
+[I got the Spoon Blues](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8).
 
-[(Mic Drop 🎤)](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8)
+[![The Spoon Blues](./_media/TheSpoonBlues@0.5x.jpg)](https://suno.com/song/44cfa192-0bb1-473d-be18-66fcbec0bfe8)
