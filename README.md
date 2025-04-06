@@ -2,15 +2,16 @@
 
 ## Description
 
-A minimal static Markdown-to-HTML blog generator.
+A minimal static Markdown-to-HTML blog generator in bash, awk, sed, and Pandoc.
 
-It's the dumbest thing that could possibly work.
+_It's the dumbest thing that could possibly work._ [WIKIWIL](https://fortc.com/wikiwil)
 
-- Converts Markdown in `/posts` to static HTML in `/output`
-- Sorts the posts in reverse order from the frontmatter date
-- Undated posts render at the end of the list in whatever order
-- Subtitles are optional frontmatter
-- Designed to deploy at Cloudflare
+- Converts Markdown `/posts` to static HTML `/output`.
+- `title:` frontmatter is required.
+- `unlisted: true` frontmatter suppresses the listing.
+- `subtitle:` and `date:` frontmatter are optional.
+- Posts are sorted in reverse date order in `index.html`. Undated posts appear last in filesystem order.
+- Designed for deployment at Cloudflare.
 
 ## Prerequisites
 
@@ -33,6 +34,4 @@ View the local output in a browser: `./output/index.html`
 
 ## License
 
-`mkwww.sh`, and the contents of `/static` and `/templates` are [MIT license](./LICENSE).
-
-[fortc.com](https://fortc.com) blog content is Copyright (c) 2025 David Finster
+See [LICENSE.md](LICENSE.md) for details.
