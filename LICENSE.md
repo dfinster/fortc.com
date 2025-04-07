@@ -3,13 +3,17 @@
 Unless otherwise noted below, all contents of this repository are
 Copyright 2025 David Finster. All rights reserved.
 
-## Exceptions (MIT Licensed)
+## Exceptions
 
-- [`mkwww.sh`](./mkwww.sh)
-- [`config.sh`](./config.sh)
-- All files in the [`/static/`](./static/) and [`/templates/`](./templates/) directories
+These files are available under MIT license.
 
-MIT License
+- `/config.sh`
+- `/dev-server.py`
+- `/mkwww.sh`
+- `/static/`
+- `/templates/`
+
+### MIT License
 
 Copyright (c) 2025 David Finster
 
