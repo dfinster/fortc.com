@@ -4,6 +4,6 @@ subtitle: It's the dumbest thing that could possibly work.
 unlisted: true
 ---
 
-This site is built with Pandoc, awk, sed, and bash. The scripts and templates are on GitHub, [licensed as described here](https://github.com/dfinster/fortc.com/blob/main/LICENSE.md). Enjoy.
+A static site generator in Bash with Pandoc is pretty dumb, but I wanted to see how far I could go with this idea. It's not quite [WIKIWIL](./wikiwil.html). It's more like misplaced nostalgia.
 
-All other content in the repository is [Copyright 2025 David Finster. All rights reserved.](https://github.com/dfinster/fortc.com/blob/main/LICENSE.md)
+[License information](https://github.com/dfinster/fortc.com/blob/main/LICENSE.md)

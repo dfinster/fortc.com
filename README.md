@@ -1,44 +1,45 @@
-# mkwww.sh v2.1 for [fortc.com](https://fortc.com)
+# mkwww
 
-## Description
-
-A minimal static Markdown-to-HTML blog generator in bash, awk, sed, and Pandoc.
-
-_It's the dumbest thing that could possibly work._ [WIKIWIL](https://fortc.com/wikiwil)
-
-`mkwww.sh` converts Markdown `/posts` to static HTML `/output`. It's designed to run locally in macOS, or at Cloudflare.
-
-### Frontmatter
-
-Frontmatter is yaml.
-
-| Key        | Description                         | Required? |
-| ---------- | ------------------------------------| ----------|
-| `title`    | Page title                          | Yes       |
-| `unlisted` | `true` suppresses the index listing | No        |
-| `subtitle` | Page subtitle                       | No        |
-| `date`     | Publication date                    | No        |
-
-Posts (other than `unlisted: true`) are in `index.html`, sorted with newest on top and undated posts at the bottom in filesystem order.
+A static site generator that converts `/posts` into `/output`.
 
 ## Prerequisites
 
-1. Set `config.sh` to your values.
-1. Install [Pandoc](https://github.com/jgm/pandoc).
-1. Use a `bash` shell with `awk`, `sed`, and other other typical GNU tools.
-1. Set `"$CF_PAGES" = "true"` in Cloudflare's build configuration.
+Use macOS for local development and Cloudflare for deployment.
+
+### Local
+
+- Install [Pandoc](https://github.com/jgm/pandoc)
+- Update `config.sh`
+
+### Cloudflare
+
+Cloudflare Pages build configuration:
+
+- Set variable `CF_PAGES` to `true`
+- Build command: `./mkwww.sh`
+- Output: `/output`
 
 ## Usage
 
-1. Run the script in the repo's root.
+For a one-time local build, run `./mkwww.sh` directly. For a hot-rebuilding development server, run `./dev-server.py`.
 
-    ```bash
-    $ ./mkwww.sh
-    ```
+## Post frontmatter
 
-1. Preview the output: `./output/index.html`
-1. Deploy to Cloudflare Pages.
+Page frontmatter is in [YAML](./posts/wikiwil.md).
 
-## License
+| Key        | Description                       | Required? |
+| ---------- | ----------------------------------| ----------|
+| `title`    | Page title                        | Yes       |
+| `date`     | Publication date                  | No        |
+| `subtitle` | Page subtitle                     | No        |
+| `unlisted` | `true` suppress the index listing | No        |
 
-See [LICENSE.md](LICENSE.md) for details.
+Posts are listed in `index.html`, newest first. Undated posts appear last.
+
+## Changelog
+
+- v3.1: Dev server
+- v2.5: Pretty URLs
+- v2.x: Templating
+- v1.x: Pandoc
+- v0.0: An idea in the shower
