@@ -13,13 +13,9 @@ According [to Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/th
 >
 > The researchers also found much higher levels of microplastics in brain tissue than in liver and kidney tissue. And microplastic concentrations were also higher in the brains of deceased patients who had been diagnosed with [dementia](https://www.smithsonianmag.com/smart-news/us-dementia-cases-are-poised-to-rise-to-one-million-each-year-by-2060-according-to-new-projections-180985831/) compared to the brains of deceased individuals without dementia.
 
-I rarely buy plastic cutlery, but I’ve got a drawer full of fast-food utensils just waiting for their moment. I wanted to see if a spoon really weighed 7 grams, so I opened a package and weighed one. To my surprise, it was only 4 grams.
+I rarely buy plastic cutlery, but I’ve got a drawer full of fast-food utensils just waiting for their moment. I wanted to see if a spoon really weighed 7 grams, so I opened a package and weighed one. To my surprise, it was only 4 grams. After I broke a tine off of a plastic fork and added it to the scale, I had 7 grams of plastic.
 
-_(Also, please don’t ask why I have a super-sensitive scale with calibration weights handy.)_
-
-After I broke a tine off of a plastic fork and added it to the scale, I had 7 grams of plastic.
-
-A spoon, plus most of a fork. _In your brain._
+Look at that. A spoon, plus most of a fork. _In your brain._
 
 > **“I have yet to encounter a single human being who says, ‘There’s a bunch of plastic in my brain and I’m totally cool with that,’”** says study co-author [Matthew Campen](https://hsc.unm.edu/directory/campen-matthew-j.html), a toxicologist at the University of New Mexico, in a [statement](https://hsc.unm.edu/news/2025/02/hsc-newsroom-post-microplastics-human-brains.html).
 
