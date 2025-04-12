@@ -1,17 +1,8 @@
 ## Copyright Notice
 
-Unless otherwise noted below, all contents of this repository are
-Copyright 2025 David Finster. All rights reserved.
+Except for the contents of the `/posts/` directory, this repository is licensed under the MIT License.
 
-## Exceptions
-
-These files are available under MIT license.
-
-- `/config.sh`
-- `/dev-server.py`
-- `/mkwww.sh`
-- `/static/`
-- `/templates/`
+The contents of the `/posts/` directory are © 2025 David Finster and may not be copied, modified, or redistributed without explicit permission.
 
 ### MIT License
 
