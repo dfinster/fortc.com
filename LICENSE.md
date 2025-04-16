@@ -1,6 +1,6 @@
 ## Copyright Notice
 
-Except for the contents of the `/posts/` directory, this repository is licensed under the MIT License.
+Except for the contents of the `/posts/` directory, this repository is under the MIT License.
 
 The contents of the `/posts/` directory are © 2025 David Finster and may not be copied, modified, or redistributed without explicit permission.
 
