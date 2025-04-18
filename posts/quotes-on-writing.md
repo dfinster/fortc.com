@@ -1,6 +1,7 @@
 ---
 title: Quotes on Writing
 date: 2025-04-16
+description: be pithy
 ---
 About 25 years ago, someone said, “Ask David the time, and he’ll explain how to build a clock.” Then I found Twitter in 2010 and turned writing into a game: how much impact can I make in 140 characters? That challenge launched my writing career. These days, I sometimes lean too far toward brevity—but when revising, it’s easier to grow a sharp idea than slog through a swamp of words.
 

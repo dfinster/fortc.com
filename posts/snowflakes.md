@@ -1,6 +1,7 @@
 ---
 title: Snowflakes
 date: 2025-04-16
+description: So amazed
 ---
 
 > "Everyone's so amazed that every snowflake's different, but no one cares that every potato is different."

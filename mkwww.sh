@@ -113,8 +113,17 @@ generate_posts() {
     filename=$(basename "$file" .md)
     output_file="output/$filename.html"
 
-    # Extract title and unlisted flag
+    # Extract title
     title=$(awk '/^title:/ {print substr($0, index($0,$2))}' "$file")
+    if [ -z "$title" ]; then
+      log_error "Missing required 'title' in frontmatter of $file"
+    fi
+    # Extract description
+    description=$(awk -F': ' '/^description:/ {print $2}' "$file")
+    if [ -z "$description" ]; then
+      log_error "Missing required 'description' in frontmatter of $file"
+    fi
+    # Extract unlisted flag
     unlisted=$(awk '/^unlisted:/ {print $2}' "$file")
 
     # If it's zeros in the temp file, null it out.
@@ -134,7 +143,7 @@ generate_posts() {
     replace_in_file "$output_file" '%%CANONICAL_PAGE%%' "$CANONICAL_HOST$filename"
     replace_in_file "$output_file" '%%CACHE_BUSTER_STYLE%%' "style.css?v=$CACHE_VERSION"
     replace_in_file "$output_file" '%%AUTHOR%%' "$AUTHOR"
-    replace_in_file "$output_file" '%%DESCRIPTION%%' "$DESCRIPTION"
+    replace_in_file "$output_file" '%%DESCRIPTION%%' "$description"
     replace_in_file "$output_file" '%%SITE_NAME%%' "$SITE_NAME"
     replace_in_file "$output_file" '%%COPYRIGHT%%' "$COPYRIGHT"
 
@@ -154,7 +163,7 @@ create_index_footer() {
   # Search and replace vars in index.html
   replace_in_file "$INDEX_FILE" '%%CACHE_BUSTER_STYLE%%' "style.css?v=$CACHE_VERSION"
   replace_in_file "$INDEX_FILE" '%%AUTHOR%%' "$AUTHOR"
-  replace_in_file "$INDEX_FILE" '%%DESCRIPTION%%' "$DESCRIPTION"
+  replace_in_file "$INDEX_FILE" '%%SITE_DESCRIPTION%%' "$SITE_DESCRIPTION"
   replace_in_file "$INDEX_FILE" '%%SITE_NAME%%' "$SITE_NAME"
   replace_in_file "$INDEX_FILE" '%%COPYRIGHT%%' "$COPYRIGHT"
 }

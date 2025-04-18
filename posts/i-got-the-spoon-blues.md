@@ -2,6 +2,7 @@
 title: I Got The Spoon Blues
 subtitle: ...and maybe a fork, too.
 date: 2025-04-01
+description: tiny plastic shards
 ---
 According [to Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/the-human-brain-may-contain-as-much-as-a-spoons-worth-of-microplastics-new-research-suggests-180985995/) (emphasis added):
 
