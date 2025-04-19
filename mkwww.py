@@ -14,26 +14,20 @@ import subprocess
 from pygments import highlight as pygment_highlight
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
+from markdown_it import MarkdownIt
+from livereload import Server
 
 # External configuration
 import config
 
-# Detect Cloudflare Pages from environment variable
-CF_PAGES = os.environ.get('CF_PAGES', 'false').lower() == 'true'
+# If true, run the local webserver
+USE_SERVER = os.environ.get('USE_SERVER', 'false').lower() == 'true'
 
 # Paths and cache
 OUTPUT_DIR = config.OUTPUT_DIR
 INDEX_FILENAME = config.INDEX_FILENAME
 INDEX_FILE = os.path.join(OUTPUT_DIR, INDEX_FILENAME)
 CACHE_VERSION = datetime.now().strftime('%Y%m%d%H%M%S')
-
-# Markdown renderer: ensure markdown-it-py
-try:
-    from markdown_it import MarkdownIt
-except ImportError:
-    logging.info('markdown-it-py not found, installing…')
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
-    from markdown_it import MarkdownIt
 
 def highlight_code(code, lang, attrs):
     if not lang:
@@ -51,16 +45,6 @@ md = MarkdownIt('commonmark', {
     'typographer': True,
     'highlight': highlight_code,
 })
-
-# LiveReload only for dev
-Server = None
-if not CF_PAGES:
-    try:
-        from livereload import Server
-    except ImportError:
-        logging.info('livereload not found, installing...')
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'livereload'])
-        from livereload import Server
 
 # Logging
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
@@ -221,7 +205,7 @@ def application(environ, start_response):
 
 # Entrypoint
 if __name__ == '__main__':
-    if CF_PAGES:
+    if not USE_SERVER:
         build_site()
         sys.exit(0)
 

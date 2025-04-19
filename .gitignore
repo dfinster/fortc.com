@@ -1,3 +1,4 @@
 drafts/
 output/
 __pycache__/*
+.venv/*
