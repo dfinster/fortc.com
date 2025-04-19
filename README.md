@@ -41,12 +41,12 @@ A static site generator that converts Markdown `/posts` into HTML `/output`.
 ## Cloudflare deployment
 
 1. Clone this repo.
-1. Delete the `/posts/` directory from your cloned version, because that's my copyrighted content. (The rest of this repo is [MIT License](./LICENSE.md).)
+1. Delete the content of the `/posts/` directory from your cloned version, because that's my copyrighted content. The rest of this repo is [MIT License](./LICENSE.md).
 1. Add your posts to `/posts/`.
 1. [Connect a Cloudflare Pages project](https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/) to your repo.
 1. Use this build command:
     ```bash
-    python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt && ./mkwww.py
+    ./mkwww.py
     ```
 1. Set the output directory to `/output`.
 1. Push commits to GitHub to rebuild the site.
