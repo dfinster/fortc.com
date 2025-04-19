@@ -37,9 +37,10 @@ Page frontmatter is in [YAML](./posts/wikiwil.md).
 Posts are listed in `index.html`, newest first. Undated posts appear last.
 
 ## Changelog
-- v4.0: Convert to pure Python
-- v3.1: Dev server
-- v2.5: Pretty URLs
-- v2.x: Templating
-- v1.x: Pandoc
-- v0.0: An idea in the shower
+
+- v4.0: Okay, this is getting silly. Convert everything to Python and remove Pandoc.
+- v3.0: Add Dev server in Python, which calls Bash script for hot reloading.
+- v2.5: Add Pretty URLs to Bash script
+- v2.0: Add Templating to Bash script
+- v1.0: Use Pandoc in Bash script
+- v0.0: An idea in the shower: Can I make an SSG in Bash?
