@@ -10,5 +10,5 @@ STATIC_DIR       = "static"
 POSTS_DIR        = "posts"
 TEMPLATES_DIR    = "templates"
 OUTPUT_DIR       = "output"
-INDEX_FILE       = "index.html"
+INDEX_FILENAME   = "index.html"
 PORT             = 8000
