@@ -16,8 +16,17 @@ import subprocess
 try:
     from livereload import Server
 except ImportError:
+    logging.info('livereload not found, installing...')
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'livereload'])
     from livereload import Server
+
+# Ensure markdown-it-py is installed
+try:
+    from markdown_it import MarkdownIt
+except ImportError:
+    logging.info('markdown-it-py not found, installing...')
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
+    from markdown_it import MarkdownIt
 
 # External configuration
 import config
