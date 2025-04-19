@@ -132,6 +132,13 @@ def generate_posts():
     items = []
     for mdfile in glob(os.path.join(config.POSTS_DIR, '*.md')):
         meta, content = parse_frontmatter_and_content(mdfile)
+        # Ensure required frontmatter fields
+        if not meta.get('title'):
+            log_error(f"Missing required frontmatter 'title' in {mdfile}")
+            sys.exit(1)
+        if not meta.get('description'):
+            log_error(f"Missing required frontmatter 'description' in {mdfile}")
+            sys.exit(1)
         items.append((meta.get('date', ''), mdfile, meta, content))
     items.sort(key=lambda x: x[0], reverse=True)
     for _, fp, meta, content in items:
