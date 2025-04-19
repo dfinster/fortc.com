@@ -28,9 +28,8 @@ CACHE_VERSION = datetime.now().strftime('%Y%m%d%H%M%S')
 try:
     from markdown_it import MarkdownIt
 except ImportError:
-    if not CF_PAGES:
-        logging.info('markdown-it-py not found, installing...')
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
+    logging.info('markdown-it-py not found, installing…')
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
     from markdown_it import MarkdownIt
 md = MarkdownIt('commonmark', {'html': True, 'linkify': True, 'typographer': True})
 
