@@ -11,6 +11,9 @@ from datetime import datetime
 from glob import glob
 from urllib.parse import unquote
 import subprocess
+from pygments import highlight as pygment_highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import get_lexer_by_name
 
 # External configuration
 import config
@@ -31,7 +34,23 @@ except ImportError:
     logging.info('markdown-it-py not found, installing…')
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
     from markdown_it import MarkdownIt
-md = MarkdownIt('commonmark', {'html': True, 'linkify': True, 'typographer': True})
+
+def highlight_code(code, lang, attrs):
+    if not lang:
+        return ''
+    try:
+        lexer = get_lexer_by_name(lang, stripall=True)
+    except Exception:
+        return ''
+    formatter = HtmlFormatter()
+    return pygment_highlight(code, lexer, formatter)
+
+md = MarkdownIt('commonmark', {
+    'html': True,
+    'linkify': True,
+    'typographer': True,
+    'highlight': highlight_code,
+})
 
 # LiveReload only for dev
 Server = None
