@@ -4,40 +4,40 @@ A static site generator that converts `/posts` into `/output`.
 
 ## Prerequisites
 
-Use macOS for local development and Cloudflare for deployment.
+Use macOS with Python installed for local development. Use Cloudflare for deployment.
 
 ### Local
 
-- Install [Pandoc](https://github.com/jgm/pandoc)
-- Update `config.sh`
+- Update `config.py` with your information
 
 ### Cloudflare
 
 Cloudflare Pages build configuration:
 
 - Set variable `CF_PAGES` to `true`
-- Build command: `./mkwww.sh`
+- Build command: `./mkwww.py`
 - Output: `/output`
 
 ## Usage
 
-For a one-time local build, run `./mkwww.sh` directly. For a hot-rebuilding development server, run `./dev-server.py`.
+Launch the hot-rebuilding development server with `./mkwww.py`.
 
 ## Post frontmatter
 
 Page frontmatter is in [YAML](./posts/wikiwil.md).
 
-| Key        | Description                       | Required? |
-| ---------- | ----------------------------------| ----------|
-| `title`    | Page title                        | Yes       |
-| `date`     | Publication date                  | No        |
-| `subtitle` | Page subtitle                     | No        |
-| `unlisted` | `true` suppress the index listing | No        |
+| Key           | Description                       | Required? |
+| ------------- | ----------------------------------| ----------|
+| `title`       | Page title                        | Yes       |
+| `description` | The OpenGraph description         | Yes       |
+| `date`        | Publication date                  | No        |
+| `subtitle`    | Page subtitle                     | No        |
+| `unlisted`    | `true` suppress the index listing | No        |
 
 Posts are listed in `index.html`, newest first. Undated posts appear last.
 
 ## Changelog
-
+- v4.0: Convert to pure Python
 - v3.1: Dev server
 - v2.5: Pretty URLs
 - v2.x: Templating
