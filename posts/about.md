@@ -1,13 +1,13 @@
 ---
 title: About This Site
-subtitle: It's the dumbest thing that could possibly work.
+subtitle: My experimental SSG
 unlisted: true
-description: It's pretty dumb
+description: A personal experiment
 ---
-This is an experimental blog written in Bash, Pandoc, a little Python, and a lot of `sed`.
+This is my static site generator. I wanted to build one from the ground up. It's currently written in Python.
 
-Writing a static site generator in Bash is pretty dumb, but I wanted to see how far I could go with this idea. It's not quite [WIKIWIL](./wikiwil.html). It's more like misplaced nostalgia.
+## Origin
 
-## Python
+This began as an experimental blog written in Bash, Pandoc, a little Python, and a lot of `sed`.
 
-Testing
+Writing a static site generator in Bash is pretty dumb, but I wanted to see how far I could go with this idea. It wasn't quite [WIKIWIL](./wikiwil.html), but more like misplaced nostalgia.
