@@ -12,34 +12,37 @@ from glob import glob
 from urllib.parse import unquote
 import subprocess
 
-# LiveReload server
-try:
-    from livereload import Server
-except ImportError:
-    logging.info('livereload not found, installing...')
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'livereload'])
-    from livereload import Server
-
-# Ensure markdown-it-py is installed
-try:
-    from markdown_it import MarkdownIt
-except ImportError:
-    logging.info('markdown-it-py not found, installing...')
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
-    from markdown_it import MarkdownIt
-
 # External configuration
 import config
 
-# Compute vars
+# Detect Cloudflare Pages environment
+CF_PAGES = os.environ.get('CF_PAGES', 'false').lower() == 'true'
+
+# Compute variables
 INDEX_FILENAME = os.path.join(config.OUTPUT_DIR, 'index.html')
 CACHE_VERSION = datetime.now().strftime('%Y%m%d%H%M%S')
 
-# Markdown renderer
-from markdown_it import MarkdownIt
+# Markdown renderer: ensure markdown-it-py
+try:
+    from markdown_it import MarkdownIt
+except ImportError:
+    if not CF_PAGES:
+        logging.info('markdown-it-py not found, installing...')
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'markdown-it-py'])
+    from markdown_it import MarkdownIt
 md = MarkdownIt('commonmark', {'html': True, 'linkify': True, 'typographer': True})
 
-# Logging
+# Only import and install livereload if not on CF_PAGES
+global Server
+if not CF_PAGES:
+    try:
+        from livereload import Server
+    except ImportError:
+        logging.info('livereload not found, installing...')
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'livereload'])
+        from livereload import Server
+
+# Logging setup
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 log_info = logging.info
 log_error = logging.error
@@ -53,9 +56,10 @@ def initialize_output():
         shutil.copytree(config.STATIC_DIR, config.OUTPUT_DIR, dirs_exist_ok=True)
 
 # Index header/footer
+
 def create_index_header():
     path = os.path.join(config.TEMPLATES_DIR, 'index-header.tmpl')
-    text = open(path, 'r').read()
+    text = open(path, 'r', encoding='utf-8').read()
     for key, val in {
         '%%CACHE_BUSTER_STYLE%%': f'style.css?v={CACHE_VERSION}',
         '%%CANONICAL_HOST%%': config.CANONICAL_HOST,
@@ -66,12 +70,13 @@ def create_index_header():
     }.items():
         text = text.replace(key, val)
     os.makedirs(os.path.dirname(INDEX_FILENAME), exist_ok=True)
-    open(INDEX_FILENAME, 'w').write(text)
+    with open(INDEX_FILENAME, 'w', encoding='utf-8') as f:
+        f.write(text)
 
 
 def create_index_footer():
     path = os.path.join(config.TEMPLATES_DIR, 'index-footer.tmpl')
-    text = open(path, 'r').read()
+    text = open(path, 'r', encoding='utf-8').read()
     for key, val in {
         '%%CACHE_BUSTER_STYLE%%': f'style.css?v={CACHE_VERSION}',
         '%%AUTHOR%%': config.AUTHOR,
@@ -80,19 +85,22 @@ def create_index_footer():
         '%%COPYRIGHT%%': config.COPYRIGHT,
     }.items():
         text = text.replace(key, val)
-    open(INDEX_FILENAME, 'a').write(text)
+    with open(INDEX_FILENAME, 'a', encoding='utf-8') as f:
+        f.write(text)
 
 # YouTube shortcode
 YOUTUBE_PATTERN = re.compile(r'\{\{youtube:([A-Za-z0-9_-]+)\}\}')
+
 def youtube_shortcode(html_path):
-    tmpl = open(os.path.join(config.TEMPLATES_DIR, 'youtube-shortcode.tmpl')).read()
-    content = open(html_path).read()
+    tmpl = open(os.path.join(config.TEMPLATES_DIR, 'youtube-shortcode.tmpl'), encoding='utf-8').read()
+    content = open(html_path, encoding='utf-8').read()
     new = YOUTUBE_PATTERN.sub(lambda m: tmpl.replace('%%YOUTUBE_ID%%', m.group(1)), content)
-    open(html_path, 'w').write(new)
+    with open(html_path, 'w', encoding='utf-8') as f:
+        f.write(new)
 
 # Frontmatter parser
 def parse_frontmatter_and_content(fp):
-    lines = open(fp).read().splitlines()
+    lines = open(fp, encoding='utf-8').read().splitlines()
     meta = {}
     content_lines = []
     if lines and lines[0].strip() == '---':
@@ -108,8 +116,9 @@ def parse_frontmatter_and_content(fp):
     return meta, '\n'.join(content_lines)
 
 from os.path import basename, splitext
+
 def build_index_item(fp, meta):
-    templ = open(os.path.join(config.TEMPLATES_DIR, 'index-item.tmpl')).read()
+    templ = open(os.path.join(config.TEMPLATES_DIR, 'index-item.tmpl'), encoding='utf-8').read()
     name = splitext(basename(fp))[0]
     templ = templ.replace('%%FILE%%', name)
     templ = templ.replace('%%TITLE%%', meta.get('title', name))
@@ -128,7 +137,7 @@ def generate_posts():
         name = splitext(basename(fp))[0]
         out = os.path.join(config.OUTPUT_DIR, f'{name}.html')
         html = md.render(content)
-        page = open(os.path.join(config.TEMPLATES_DIR, 'post.tmpl')).read()
+        page = open(os.path.join(config.TEMPLATES_DIR, 'post.tmpl'), encoding='utf-8').read()
         for key, val in {
             '$body$': html,
             '$title$': meta.get('title', ''),
@@ -144,10 +153,12 @@ def generate_posts():
         }.items():
             page = page.replace(key, val)
         os.makedirs(config.OUTPUT_DIR, exist_ok=True)
-        open(out, 'w').write(page)
+        with open(out, 'w', encoding='utf-8') as f:
+            f.write(page)
         youtube_shortcode(out)
         if meta.get('unlisted', 'false').lower() != 'true':
-            open(INDEX_FILENAME, 'a').write(build_index_item(fp, meta))
+            with open(INDEX_FILENAME, 'a', encoding='utf-8') as idx:
+                idx.write(build_index_item(fp, meta))
         else:
             log_info(f'Skipping unlisted: {name}')
 
@@ -160,25 +171,14 @@ def build_site():
     create_index_footer()
     log_info('Build complete.')
 
-# WSGI app
-def application(environ, start_response):
-    path = environ.get('PATH_INFO', '/')
-    path = unquote(path.split('?', 1)[0])
-    rel = path.lstrip('/') or ''
-    fs_path = os.path.join(config.OUTPUT_DIR, rel)
-    if os.path.isdir(fs_path):
-        fs_path = os.path.join(fs_path, 'index.html')
-    elif not os.path.splitext(fs_path)[1] and os.path.exists(fs_path + '.html'):
-        fs_path += '.html'
-    if not os.path.exists(fs_path):
-        start_response('404 Not Found', [('Content-Type', 'text/plain')])
-        return [b'404 Not Found']
-    mime, _ = mimetypes.guess_type(fs_path)
-    start_response('200 OK', [('Content-Type', mime or 'application/octet-stream')])
-    return [open(fs_path, 'rb').read()]
-
+# If CF_PAGES, only build and exit
 if __name__ == '__main__':
-    server = Server(application)
+    if CF_PAGES:
+        build_site()
+        sys.exit(0)
+
+    # Development: live reload and server
+    server = Server()  # uses default app
     server.watch(config.POSTS_DIR + '/*.md', build_site)
     server.watch(config.TEMPLATES_DIR + '/*.tmpl', build_site)
     build_site()
